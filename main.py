@@ -1,5 +1,7 @@
 from manga_utils import latest_manga
 from manga_utils import file
+from manga_utils import notify
+
 
 martial_peak = "Martial Peak"
 def main():
@@ -13,6 +15,7 @@ def main():
     if new_chapter:
         print("new chapter available for ", martial_peak)
         chapter.write_to_file()
+        notify.notify()
 
 if __name__ == '__main__':
     main()
